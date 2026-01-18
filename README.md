@@ -22,8 +22,10 @@ Ingress routes traffic to Services, and Services route traffic to Pods.
 k8s-project/
 - app/
 - docs/
+  - architecture.md
 - k8s/
   - config/
+    - nginx-configmap.yaml
   - deployment/
     - nginx-deployment.yaml
   - service/
@@ -85,6 +87,15 @@ kubectl apply -f k8s/service/nginx-service.yaml
 kubectl apply -f k8s/ingress/nginx-ingress.yaml
 
 ---
+## Configuration Management
+
+This project uses a ConfigMap to manage Nginx HTML content externally.
+The ConfigMap is mounted into the container, allowing configuration changes
+without rebuilding the container image.
+
+
+
+---
 
 ##  Local Hostname Configuration
 
@@ -118,6 +129,8 @@ Hostname resolution using /etc/hosts is local to the system where it is configur
 This setup is intentionally minimal and designed for learning Kubernetes networking fundamentals.
 
 ---
+For a detailed explanation of the system design and traffic flow,
+see [docs/architecture.md](docs/architecture.md).
 
 ## 👤 Author
 
