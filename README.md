@@ -6,7 +6,7 @@ The focus of this project is to demonstrate correct Kubernetes architecture and 
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 Client  
 → Ingress (hostname-based routing)  
@@ -17,7 +17,7 @@ Ingress routes traffic to Services, and Services route traffic to Pods.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 k8s-project/
 - app/
@@ -55,7 +55,7 @@ This approach avoids NodePort and mirrors real-world Kubernetes setups.
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 - Linux environment
 - Minikube
@@ -64,7 +64,7 @@ This approach avoids NodePort and mirrors real-world Kubernetes setups.
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 Start Minikube:
 
@@ -86,7 +86,7 @@ kubectl apply -f k8s/ingress/nginx-ingress.yaml
 
 ---
 
-## 🌐 Local Hostname Configuration
+##  Local Hostname Configuration
 
 Get Minikube IP:
 
@@ -102,7 +102,7 @@ Example:
 
 ---
 
-## 🧪 Test
+##  Test
 
 curl http://nginx.local
 
@@ -112,7 +112,7 @@ Welcome to nginx!
 
 ---
 
-## 📝 Notes
+##  Notes
 
 Hostname resolution using /etc/hosts is local to the system where it is configured.  
 This setup is intentionally minimal and designed for learning Kubernetes networking fundamentals.
